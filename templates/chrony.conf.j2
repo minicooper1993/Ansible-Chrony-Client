@@ -1,0 +1,15 @@
+  {% for server in serverntp -%}
+  server {{ server }} iburst
+  {% endfor -%}
+  keyfile {{ keyfile }}
+  commandkey {{ number }}
+  driftfile {{ driftfile }}
+  log tracking measurements statistics
+  logdir {{ logdir }}
+  maxupdateskew {{ maxupdate }}
+  dumponexit
+  dumpdir {{ dumpdir }}
+  logchange {{ logchange }}
+  hwclockfile {{ hwclock }}
+  rtcsync
+
